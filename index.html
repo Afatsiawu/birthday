@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Gloria! 💖</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <!-- Background Elements -->
+    <div id="particles-js"></div>
+    <div id="gloria-gallery" class="gallery-background"></div>
+    
+    <!-- Magical Sparkle Elements (keep minimal) -->
+    <div class="magical-sparkle">✨</div>
+    <div class="magical-sparkle">🌟</div>
+    <div class="magical-sparkle">💫</div>
+    <div class="magical-sparkle">⭐</div>
+    
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Step 1: Welcome Screen -->
+        <div class="step active" id="step1">
+            <div class="glass-card">
+                <h1 class="heartbeat-text magical-glow blur-title">🎉 Happy Birthday Gloria! 🎉</h1>
+                <p class="subtitle">Click to start your special day</p>
+                <button class="glow-button" onclick="nextStep()">Start Journey 💖</button>
+            </div>
+        </div>
+
+        <!-- Step 2: Birthday Wishes -->
+        <div class="step" id="step2">
+            <div class="glass-card">
+                <h2 class="magical-glow">Happy Birthday, Gloria! 🎂</h2>
+                <p class="message-text">Here are some special wishes for you:</p>
+                <div class="wishes-container">
+                    <div class="wish-item">
+                        <span class="wish-icon">🌟</span>
+                        <p>May your day be filled with joy, laughter, and countless beautiful moments!</p>
+                    </div>
+                    <div class="wish-item">
+                        <span class="wish-icon">💖</span>
+                        <p>Wishing you health, happiness, and all the love your heart can hold!</p>
+                    </div>
+                    <div class="wish-item">
+                        <span class="wish-icon">🎁</span>
+                        <p>May all your dreams come true and your year be absolutely amazing!</p>
+                    </div>
+                </div>
+                <button class="glow-button" onclick="nextStep()">Continue to Celebration 🎉</button>
+            </div>
+        </div>
+
+        <!-- Step 3: Heart Animation -->
+        <div class="step" id="step3">
+            <div class="glass-card">
+                <h2 class="magical-glow">Sending You Love! 💖</h2>
+                <!-- <div class="heart-container">
+                    <div class="heart"></div>
+                </div> -->
+                <div class="person-image-container">
+                    <img src="IMG-20250713-WA0001.jpg" alt="Gloria Heart" class="person-image">
+                </div>
+                <p class="special-message">Feel the love and warmth surrounding you on your special day!</p>
+                <button class="glow-button" onclick="nextStep()">Continue to Fireworks 🎆</button>
+            </div>
+        </div>
+
+        <!-- Step 4: Fireworks -->
+        <div class="step" id="step4">
+            <div class="glass-card">
+                <h2 class="magical-glow">Celebration Time! 🎆</h2>
+                <div class="celebration-container">
+                    <div class="firework"></div>
+                    <div class="firework"></div>
+                    <div class="firework"></div>
+                </div>
+                <div class="person-image-container">
+                    <img src="IMG-20250713-WA0002.jpg" alt="Gloria Firework" class="person-image">
+                </div>
+                <p class="special-message">The sky is celebrating with you!</p>
+                <button class="glow-button" onclick="nextStep()">View Photo Gallery 📸</button>
+            </div>
+        </div>
+
+        <!-- Step 5: Photo Gallery -->
+        <div class="step" id="step5">
+            <div class="glass-card">
+                <h2 class="magical-glow">Your Special Moments 📸</h2>
+                <p class="special-message">Happy Birthday to a beautiful soul! 🎉 May your day be filled with joy, love, and countless smiles today and every day!</p>
+                <div class="person-image-container gallery-grid">
+                    <img src="IMG-20250713-WA0000.jpg" alt="Gloria 1" class="person-image">
+                    <img src="IMG-20250713-WA0001.jpg" alt="Gloria 2" class="person-image">
+                    <img src="IMG-20250713-WA0002.jpg" alt="Gloria 3" class="person-image">
+                </div>
+                <button class="glow-button" onclick="nextStep()">Continue to Final Message 💝</button>
+            </div>
+        </div>
+
+        <!-- Step 6: Final Message -->
+        <div class="step" id="step6">
+            <div class="glass-card">
+                <h2 class="magical-glow">Happy Birthday! 🎂</h2>
+                <div class="person-image-container">
+                    <img src="IMG-20250713-WA0001.jpg" alt="Gloria Heart" class="person-image">
+                </div>
+                <p class="final-message">
+                    Dear Gloria,<br><br>
+                    On your special day, may you be surrounded by love, laughter, and all the things that make you smile. 
+                    You deserve all the happiness in the world!<br><br>
+                    Here's to another amazing year of your life! 🥂
+                </p>
+                <button class="glow-button" onclick="restart()">Start Over 🔄</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
