@@ -1,6 +1,6 @@
 // Global variables
 let currentStep = 1;
-let userName = 'Gloria';
+let userName = 'Perpetual';
 let galleryCreated = false;
 
 // Initialize the website
@@ -456,12 +456,12 @@ slideAnimationCSS.textContent = `
 `;
 document.head.appendChild(slideAnimationCSS);
 
-// Function to save name and proceed (Gloria only)
+// Function to save name and proceed (Perpetual only)
 function saveName() {
-    console.log('👤 saveName called - Setting name to Gloria');
+    console.log('👤 saveName called - Setting name to Perpetual');
     
-    // Set Gloria as the name
-    userName = 'Gloria';
+    // Set Perpetual as the name
+    userName = 'Perpetual';
     
     // Update display names with animation
     const userNameDisplay = document.getElementById('userNameDisplay');
@@ -472,7 +472,7 @@ function saveName() {
             opacity: 0,
             duration: 0.3,
             onComplete: () => {
-                userNameDisplay.textContent = 'Gloria';
+                userNameDisplay.textContent = 'Perpetual';
                 gsap.to(userNameDisplay, {
                     opacity: 1,
                     duration: 0.3
@@ -487,7 +487,7 @@ function saveName() {
             duration: 0.3,
             delay: 0.1,
             onComplete: () => {
-                finalUserName.textContent = 'Gloria';
+                finalUserName.textContent = 'Perpetual';
                 gsap.to(finalUserName, {
                     opacity: 1,
                     duration: 0.3
@@ -497,7 +497,7 @@ function saveName() {
     }
     
     // Show success message
-    showSuccessMessage('Welcome, Gloria! 💖');
+    showSuccessMessage('Welcome, Perpetual! 💖');
     
     // Continue to next step after a short delay
     setTimeout(() => {
@@ -506,7 +506,7 @@ function saveName() {
         
         // Create gallery in the background
         setTimeout(() => {
-            // createGloriaGallery(); // This line is removed
+            // createPerpetualGallery(); // This line is removed
         }, 200);
     }, 800);
 }
@@ -571,12 +571,12 @@ function animateFireworks() {
     });
 }
 
-// Function to create Gloria's gallery
+// Function to create Perpetual's gallery
 // This function is no longer needed as gallery is handled in HTML
-// function createGloriaGallery() {
+// function createPerpetualGallery() {
 //     if (galleryCreated) return;
     
-//     const gallery = document.getElementById('gloria-gallery');
+//     const gallery = document.getElementById('perpetual-gallery');
 //     const photoUrls = [
 //         'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=200&h=200&fit=crop&crop=face',
 //         'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=face',
@@ -592,7 +592,7 @@ function animateFireworks() {
 //     photoUrls.forEach((url, index) => {
 //         const photo = document.createElement('img');
 //         photo.src = url;
-//         photo.alt = 'Gloria';
+//         photo.alt = 'Perpetual';
 //         photo.className = 'gallery-photo';
         
 //         // Position photos in a line across the screen
@@ -656,7 +656,7 @@ function animateTextElements() {
 // Function to restart the experience
 function restart() {
     currentStep = 1;
-    userName = 'Gloria';
+    userName = 'Perpetual';
     galleryCreated = false;
 
     // Reset all steps
@@ -667,7 +667,7 @@ function restart() {
     document.getElementById('step1').classList.add('active');
 
     // Hide gallery completely
-    const gallery = document.getElementById('gloria-gallery');
+    const gallery = document.getElementById('perpetual-gallery');
     gallery.classList.remove('active');
     gallery.style.opacity = '0';
     gallery.style.visibility = 'hidden';
