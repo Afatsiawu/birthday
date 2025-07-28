@@ -29,12 +29,13 @@
 body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(135deg, 
-        /* #ff6b9d 0%, 
-        #c44569 25%,  */
-        #f8b5d3 50%, 
-        #ff9ff3 75%, 
-        #f368e0 100%);
-    background-size: 400% 400%;
+        rgba(248, 181, 211, 0.1) 0%, 
+        rgba(255, 159, 243, 0.1) 50%, 
+        rgba(243, 104, 224, 0.1) 100%),
+        url('p2.jpg');
+    background-size: 400% 400%, cover;
+    background-position: 0% 50%, center;
+    background-repeat: no-repeat, no-repeat;
     min-height: 100vh;
     overflow-x: hidden;
     position: relative;
@@ -362,20 +363,20 @@ body::after {
 
 /* Magical Glass Card */
 .glass-card {
-    background: rgba(255, 107, 157, 0.15) !important; /* soft pink, semi-transparent */
-    backdrop-filter: blur(100px) !important;
-    -webkit-backdrop-filter: blur(100px) !important;
+    background: rgba(255, 255, 255, 0.03) !important; /* even more transparent */
+    backdrop-filter: blur(3px) !important;
+    -webkit-backdrop-filter: blur(3px) !important;
     border-radius: 30px;
     padding: 50px;
     text-align: center;
-    box-shadow: 0 8px 32px 0 rgba(255, 107, 157, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
     max-width: 550px;
     width: 90%;
     transform: translateY(30px);
     animation: none !important;
     position: relative;
     overflow: hidden;
-    border: none !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
     background-clip: padding-box;
 }
 
@@ -439,12 +440,7 @@ h2 {
     color: #fff;
     margin-bottom: 25px;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
-    animation: gentleGlow 3s ease-in-out infinite alternate;
-}
-
-@keyframes gentleGlow {
-    0% { text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4); }
-    100% { text-shadow: 2px 2px 15px rgba(255, 255, 255, 0.6); }
+    animation: none; /* Animation removed - no more glowing */
 }
 
 .subtitle {
@@ -897,28 +893,7 @@ h2 {
 
 /* Add magical frame around the image */
 .person-image-container::before {
-    content: '';
-    position: absolute;
-    top: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background: linear-gradient(45deg, 
-        var(--primary-pink), 
-        var(--magenta), 
-        var(--purple), 
-        var(--gold));
-    background-size: 400% 400%;
-    animation: frameGlow 4s ease-in-out infinite;
-    z-index: -1;
-    opacity: 0.3;
-}
-
-@keyframes frameGlow {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
+    display: none; /* Frame removed - no more glowing frame */
 }
 
 .person-image {
@@ -930,18 +905,13 @@ h2 {
     box-shadow: 
         0 12px 35px rgba(0, 0, 0, 0.3),
         0 0 0 3px rgba(255, 107, 157, 0.3);
-    animation: enhancedFloat 4s ease-in-out infinite;
-    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: none; /* Animation removed - no more floating */
+    transition: none; /* No transitions */
     filter: brightness(1.1) contrast(1.05);
 }
 
 .person-image:hover {
-    transform: scale(1.1) rotate(5deg);
-    border-color: var(--primary-pink);
-    box-shadow: 
-        0 20px 50px rgba(255, 107, 157, 0.6),
-        0 0 0 5px rgba(255, 107, 157, 0.5);
-    filter: brightness(1.2) contrast(1.1) saturate(1.1);
+    /* Hover effects removed - no more scaling or rotating */
 }
 
 @keyframes enhancedFloat {
@@ -961,26 +931,7 @@ h2 {
 
 /* Enhanced Heartbeat Text */
 .heartbeat-text {
-    animation: enhancedHeartbeatText 2s ease-in-out infinite;
-}
-
-@keyframes enhancedHeartbeatText {
-    0%, 100% {
-        transform: scale(1);
-        filter: brightness(1);
-    }
-    25% {
-        transform: scale(1.05);
-        filter: brightness(1.1);
-    }
-    50% {
-        transform: scale(1.1);
-        filter: brightness(1.2);
-    }
-    75% {
-        transform: scale(1.05);
-        filter: brightness(1.1);
-    }
+    /* Animation removed - no more heartbeat effect */
 }
 
 /* Magical Balloons */
@@ -1401,29 +1352,7 @@ h2 {
 
 /* Add magical text glow effect */
 .magical-glow {
-    text-shadow: 
-        0 0 5px var(--primary-pink),
-        0 0 10px var(--primary-pink),
-        0 0 15px var(--primary-pink),
-        0 0 20px var(--primary-pink);
-    animation: textGlow 2s ease-in-out infinite alternate;
-}
-
-@keyframes textGlow {
-    from {
-        text-shadow: 
-            0 0 5px var(--primary-pink),
-            0 0 10px var(--primary-pink),
-            0 0 15px var(--primary-pink),
-            0 0 20px var(--primary-pink);
-    }
-    to {
-        text-shadow: 
-            0 0 10px var(--magenta),
-            0 0 20px var(--magenta),
-            0 0 30px var(--magenta),
-            0 0 40px var(--magenta);
-    }
+    /* Glow effect removed - no more glowing animation */
 }
 
 /* Add magical button ripple effect */
